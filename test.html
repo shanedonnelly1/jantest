@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Test</h1>
+    <a href="#math" id="clear">Clear and go to #math</a>
+    <a href="#french" id="set">Set and go to #french</a>
+    <div style="height: 500px">
+        <p>Div 1</p>
+    </div>
+    <div style="height: 500px">
+        <p>Div 2</p>
+    </div>
+    <div>
+        <a name="math">I am math</a>
+        <p>Math</p>
+    </div>
+    <div style="height: 500px">
+        <p>Div 3</p>
+    </div>
+    <div>
+        <a name="french">I am french</a>
+        <p>French</p>
+    </div>
+    <div style="height: 500px">
+        <p>Div 4</p>
+    </div>
+    <script>
+        document.getElementById('clear').addEventListener('click', function (event) {
+            console.log("clear - Click")
+            localStorage.removeItem("uuid")
+            localStorage.removeItem("name")
+        });
+        document.getElementById('set').addEventListener('click', function (event) {
+            console.log("set - Click")
+            localStorage.setItem("uuid", "Set me uuid")
+            localStorage.setItem("name", "set me name")
+        });
+    </script> 
+</body>
+
+</html>
